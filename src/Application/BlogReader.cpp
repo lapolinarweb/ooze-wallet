@@ -34,7 +34,7 @@ namespace WalletGui {
 namespace {
 
 const char BLOG_RSS_SCHEME[] = "https";
-const char BLOG_RSS_HOST[] = "getturtlecoin.org";
+const char BLOG_RSS_HOST[] = "getbitcoal.org";
 const char BLOG_RSS_PATH[] = "/blog/feed.atom/";
 
 const char BLOG_RSS_ID_TAG_NAME[] = "id";
@@ -58,7 +58,7 @@ BlogReader::~BlogReader() {
 }
 
 QString BlogReader::getName() const {
-  return tr("turtlecoin Blog:");
+  return tr("TurtleCoin Blog:");
 }
 
 QPixmap BlogReader::getIcon() const {

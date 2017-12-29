@@ -162,7 +162,7 @@ if (WIN32)
   if (NOT MSVC)
     message(FATAL_ERROR "Only MSVC is supported on this platform")
   endif ()
-  
+
   set(STATIC ${MSVC} CACHE BOOL "Link libraries statically")
 
   if(STATIC)

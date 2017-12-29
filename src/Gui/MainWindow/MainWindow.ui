@@ -620,7 +620,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>SEND turtlecoin</string>
+            <string>SEND TURTLECOIN</string>
            </property>
            <property name="checkable">
             <bool>true</bool>
@@ -858,7 +858,7 @@
     </property>
     <addaction name="m_communityForumAction"/>
     <addaction name="m_reportIssueAction"/>
-    <addaction name="m_aboutturtlecoinAction"/>
+    <addaction name="m_aboutTurtleCoinAction"/>
     <addaction name="m_aboutQtAction"/>
    </widget>
    <addaction name="menuFile"/>
@@ -915,12 +915,12 @@
     <string>Change password</string>
    </property>
   </action>
-  <action name="m_aboutturtlecoinAction">
+  <action name="m_aboutTurtleCoinAction">
    <property name="enabled">
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>About turtlecoin</string>
+    <string>About TurtleCoin</string>
    </property>
   </action>
   <action name="m_aboutQtAction">
@@ -1188,7 +1188,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>m_aboutturtlecoinAction</sender>
+   <sender>m_aboutTurtleCoinAction</sender>
    <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
    <slot>about()</slot>

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=turtlecoin Wallet
-Comment=turtlecoin wallet
+Name=TurtleCoin Wallet
+Comment=TurtleCoin wallet
 Exec=turtlecoinwallet %U
 Terminal=false
 Type=Application

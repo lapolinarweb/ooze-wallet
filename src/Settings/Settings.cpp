@@ -489,8 +489,8 @@ bool Settings::isStartOnLoginEnabled() const {
   res = QFile::exists(autorunFilePath);
 #elif defined(Q_OS_WIN)
   QSettings autorunSettings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", QSettings::NativeFormat);
-  res = autorunSettings.contains("turtlecoinWallet") &&
-    !QDir::fromNativeSeparators(autorunSettings.value("turtlecoinWallet").toString().split(' ')[0]).compare(QCoreApplication::applicationFilePath());
+  res = autorunSettings.contains("TurtleCoinWallet") &&
+    !QDir::fromNativeSeparators(autorunSettings.value("TurtleCoinWallet").toString().split(' ')[0]).compare(QCoreApplication::applicationFilePath());
 #endif
   return res;
 }
@@ -684,7 +684,7 @@ void Settings::setStartOnLoginEnabled(bool _enable) {
     if (_enable) {
       autorunFile.write("[Desktop Entry]\n");
       autorunFile.write("Type=Application\n");
-      autorunFile.write("Name=turtlecoin Wallet\n");
+      autorunFile.write("Name=TurtleCoin Wallet\n");
       autorunFile.write(QString("Exec=%1 --minimized\n").arg(QCoreApplication::applicationFilePath()).toLocal8Bit());
       autorunFile.write("Terminal=false\n");
       autorunFile.write("Hidden=false\n");
@@ -696,9 +696,9 @@ void Settings::setStartOnLoginEnabled(bool _enable) {
     QSettings autorunSettings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", QSettings::NativeFormat);
     if (_enable) {
       QString appPath = QString("%1 --minimized").arg(QDir::toNativeSeparators(QCoreApplication::applicationFilePath()));
-      autorunSettings.setValue("turtlecoinWallet", appPath);
+      autorunSettings.setValue("TurtleCoinWallet", appPath);
     } else {
-      autorunSettings.remove("turtlecoinWallet");
+      autorunSettings.remove("TurtleCoinWallet");
     }
 #endif
   }

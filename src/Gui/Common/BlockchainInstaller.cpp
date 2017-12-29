@@ -67,7 +67,7 @@ void BlockchainInstaller::exec() {
     return;
   }
 
-  if (!checkIfturtlecoinBlockchainExists()) {
+  if (!checkIfTurtleCoinBlockchainExists()) {
     installBlockchain();
     return;
   }
@@ -134,7 +134,7 @@ bool BlockchainInstaller::getGenesisBlockFromBlockchain(char** _genesisBlockData
   return true;
 }
 
-bool BlockchainInstaller::checkIfturtlecoinBlockchainExists() const {
+bool BlockchainInstaller::checkIfTurtleCoinBlockchainExists() const {
   return m_turtlecoinDir.exists() && m_turtlecoinDir.exists(m_blocksFileName);
 }
 

@@ -39,7 +39,7 @@ private:
   const QDir m_applicationDir;
 
   bool checkIfCurrentBlockchainExists() const;
-  bool checkIfturtlecoinBlockchainExists() const;
+  bool checkIfTurtleCoinBlockchainExists() const;
   bool getGenesisBlockFromBlockchain(char** _genesisBlockData) const;
   bool checkIfBlockchainOutdated(quint64& _current, quint64& _turtlecoin) const;
   QFileInfo currentBlockchainInfo() const;
