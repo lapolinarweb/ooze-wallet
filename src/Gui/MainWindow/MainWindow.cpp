@@ -33,11 +33,11 @@
 #include "MainWindow.h"
 #include "Settings/Settings.h"
 #include "WalletLogger/WalletLogger.h"
-#include "Common/AboutDialog.h"
-#include "Common/ChangePasswordDialog.h"
-#include "Common/NewPasswordDialog.h"
-#include "Common/KeyDialog.h"
-#include "Common/QuestionDialog.h"
+#include "Gui/Common/AboutDialog.h"
+#include "Gui/Common/ChangePasswordDialog.h"
+#include "Gui/Common/NewPasswordDialog.h"
+#include "Gui/Common/KeyDialog.h"
+#include "Gui/Common/QuestionDialog.h"
 #include "ICryptoNoteAdapter.h"
 #include "INodeAdapter.h"
 #include "Models/AddressBookModel.h"
@@ -50,7 +50,7 @@
 #include "Models/TransactionsModel.h"
 #include "Models/TransactionPoolModel.h"
 #include "Models/WalletStateModel.h"
-#include "Options/OptionsDialog.h"
+#include "Gui/Options/OptionsDialog.h"
 #include "Style/Style.h"
 
 #include "ui_MainWindow.h"
@@ -60,8 +60,8 @@ namespace WalletGui {
 namespace {
 
 const int MAX_RECENT_WALLET_COUNT = 10;
-const char COMMUNITY_FORUM_URL[] = "https://bytecointalk.org";
-const char REPORT_ISSUE_URL[] = "https://bytecoin.org/contact";
+const char COMMUNITY_FORUM_URL[] = "http://getturtlecoin.org";
+const char REPORT_ISSUE_URL[] = "http://getturtlecoin.org/contact";
 
 const char DONATION_URL_DONATION_TAG[] = "donation";
 const char DONATION_URL_LABEL_TAG[] = "label";
@@ -107,7 +107,7 @@ MainWindow::MainWindow(ICryptoNoteAdapter* _cryptoNoteAdapter, IAddressBookManag
   m_addRecipientAction(new QAction(this)), m_styleSheetTemplate(_styleSheetTemplate), m_walletStateMapper(new QDataWidgetMapper(this)),
   m_syncMovie(new QMovie(Settings::instance().getCurrentStyle().getWalletSyncGifFile(), QByteArray(), this)) {
   m_ui->setupUi(this);
-  setWindowTitle(tr("Bytecoin Wallet %1").arg(Settings::instance().getVersion()));
+  setWindowTitle(tr("turtlecoin Wallet %1").arg(Settings::instance().getVersion()));
   m_addRecipientAction->setObjectName("m_addRecipientAction");
   m_cryptoNoteAdapter->addObserver(this);
   m_cryptoNoteAdapter->getNodeAdapter()->getWalletAdapter()->addObserver(this);

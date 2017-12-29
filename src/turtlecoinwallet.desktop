@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=turtlecoin Wallet
+Comment=turtlecoin wallet
+Exec=turtlecoinwallet %U
+Terminal=false
+Type=Application
+Icon=turtlecoin
+MimeType=x-scheme-handler/turtlecoin;
+Categories=Office;Finance;

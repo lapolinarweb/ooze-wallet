@@ -35,15 +35,15 @@ public:
 private:
   const QString m_blockIndexesFileName;
   const QString m_blocksFileName;
-  const QDir m_bytecoinDir;
+  const QDir m_turtlecoinDir;
   const QDir m_applicationDir;
 
   bool checkIfCurrentBlockchainExists() const;
-  bool checkIfBytecoinBlockchainExists() const;
+  bool checkIfturtlecoinBlockchainExists() const;
   bool getGenesisBlockFromBlockchain(char** _genesisBlockData) const;
-  bool checkIfBlockchainOutdated(quint64& _current, quint64& _bytecoin) const;
+  bool checkIfBlockchainOutdated(quint64& _current, quint64& _turtlecoin) const;
   QFileInfo currentBlockchainInfo() const;
-  QFileInfo bytecoinBlockchainInfo() const;
+  QFileInfo turtlecoinBlockchainInfo() const;
 
   void copyProgress(quint64 _copied, quint64 _total);
   void installBlockchain();
