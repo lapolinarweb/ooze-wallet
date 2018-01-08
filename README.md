@@ -11,5 +11,9 @@
 - `sudo yes "" | apt-get upgrade`
 - `git clone https://github.com/rocksteadytc/ooze`
 - `cd ooze`
+- `cd cryptonote`
+- `git clone https://github.com/turtlecoin/turtlecoin . `
+- `cd ..`
+- `mkdir build && cd $_`
 - `cmake .`
 - `make -j4`
