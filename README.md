@@ -15,5 +15,5 @@
 - `git clone https://github.com/turtlecoin/turtlecoin . `
 - `cd ..`
 - `mkdir build && cd $_`
-- `cmake .`
+- `cmake ..`
 - `make -j4`
