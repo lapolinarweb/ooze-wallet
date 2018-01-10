@@ -214,7 +214,7 @@ public:
         m_walletTextLabel->setText(QApplication::translate("NoWalletFrame", "WALLET", 0));
         m_okButton->setText(QApplication::translate("NoWalletFrame", "OK", 0));
         m_createWalletButton->setText(QApplication::translate("NoWalletFrame", "Create wallet", 0));
-        m_openWalletButton->setText(QApplication::translate("NoWalletFrame", "Open wallet", 0));
+        m_openWalletButton->setText(QApplication::translate("NoWalletFrame", "Load wallet", 0));
     } // retranslateUi
 
 };
